@@ -10,7 +10,7 @@ DB_FILE = "orders.csv"
 MENU = {"Chicken Rice": 80, "Sambar Rice": 50, "Veg Burger": 60, "Coffee": 20}
 
 # --- Sidebar Navigation ---
-st.sidebar.title("https://in.linkedin.com/pub/dir/Ram/Karri/in-0-India Access Control")
+st.sidebar.title("1755615021349.jpg Access Control")
 role = st.sidebar.radio("Select View:", ["Student View", "Manager Login"])
 
 # ---------------- STUDENT VIEW ----------------
@@ -69,4 +69,5 @@ else:
                 st.error("The data file is corrupted. Click 'Reset All Data' in the sidebar to fix it.")
         else:
             st.info("The canteen is currently empty. No orders found.")
+
 
