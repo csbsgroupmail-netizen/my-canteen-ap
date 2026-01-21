@@ -7,7 +7,7 @@ import csv
 # --- Basic Configuration ---
 st.set_page_config(page_title="Campus Canteen Fresh Start", layout="wide")
 DB_FILE = "orders.csv"
-MENU = {"Chicken Rice": 80, "Sambar Rice": 50, "Veg Burger": 60, "Coffee": 20}
+MENU = {"Russian": 80, "Sriraj": 50, "Veg Lady": 60, "Chinese": 20, "Latina":150}
 
 # --- Sidebar Navigation ---
 st.sidebar.title("🔐 Access Control")
@@ -69,4 +69,5 @@ else:
                 st.error("The data file is corrupted. Click 'Reset All Data' in the sidebar to fix it.")
         else:
             st.info("The canteen is currently empty. No orders found.")
+
 
