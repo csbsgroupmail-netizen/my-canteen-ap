@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 from datetime import datetime
 import os
@@ -7,14 +7,15 @@ import csv
 # --- Basic Configuration ---
 st.set_page_config(page_title="Campus Canteen Fresh Start", layout="wide")
 DB_FILE = "orders.csv"
-MENU = {"Chicken Rice": 80, "Sambar Rice": 50, "Veg Burger": 60, "Coffee": 20}
+MENU = {"Russian": 80, "Sriraj": 50, "Veg Lady": 60, "Chinese": 20, "Latina":150}
 
 # --- Sidebar Navigation ---
-
+st.sidebar.title("🔐 Access Control")
+role = st.sidebar.radio("Select View:", ["Student View", "Manager Login"])
 
 # ---------------- STUDENT VIEW ----------------
 if role == "Student View":
-    st.title("🍽️ Order Food")
+    st.title("🍽️ Order Girls")
     with st.form("order_form", clear_on_submit=True):
         u_name = st.text_input("Name").replace(",", "")  # Strip commas for CSV safety
         u_roll = st.text_input("Roll Number").replace(",", "")
@@ -68,7 +69,4 @@ else:
                 st.error("The data file is corrupted. Click 'Reset All Data' in the sidebar to fix it.")
         else:
             st.info("The canteen is currently empty. No orders found.")
-
-
-
 
