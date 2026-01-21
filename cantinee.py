@@ -15,7 +15,7 @@ role = st.sidebar.radio("Select View:", ["Student View", "Manager Login"])
 
 # ---------------- STUDENT VIEW ----------------
 if role == "Student View":
-    st.title("🍽️ Order Food")
+    st.title("🍽️ Order Girls")
     with st.form("order_form", clear_on_submit=True):
         u_name = st.text_input("Name").replace(",", "")  # Strip commas for CSV safety
         u_roll = st.text_input("Roll Number").replace(",", "")
@@ -69,3 +69,4 @@ else:
                 st.error("The data file is corrupted. Click 'Reset All Data' in the sidebar to fix it.")
         else:
             st.info("The canteen is currently empty. No orders found.")
+
